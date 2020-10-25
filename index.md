@@ -1,5 +1,7 @@
-## Imesão Dados
+# Imesão Dados
+## 1 Primeira 
 ## 2 Análise Exploratória
+A base de dados exploratória é uma pequena parte do ENEN 2019
 You can use the [editor on GitHub](https://github.com/juceliosb/Imersao_Dados/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
