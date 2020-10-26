@@ -1,12 +1,13 @@
 # Imersão Dados
 ## 1 Primeira Análise em Dados de Educação
-O que precisamos para começar a trabalhar com Ciências de Dados. Poderiamos instalar todos os softwares necessário para rodar em seu computador e uma boa interfaçe gráfica para plotagem de gráficos. Porém existe uma segunda opção que facilita muito a vida de todos, principalmente quem não tem um computador tão poderoso, onde podemos utilizar ferramentas que não irar ficar instaladas em seu computador, bastando somente ter um bom navegador e uma conta no Google para utilizar, uma dessas ferramentas se chamada **Colaboratory** mais popularmente conhecida como [Colab](https://colab.research.google.com/) que permite escrever código Python em seu navegador e criar varios notebooks.
+O que precisamos para começar a trabalhar com Ciências de Dados?
+- Poderiamos instalar todos os softwares necessário para rodar em seu computador e uma boa interfaçe gráfica para plotagem de gráficos. Porém existe uma segunda opção que facilita muito a vida de todos, principalmente quem não tem um computador tão poderoso, onde podemos utilizar ferramentas que não irar ficar instaladas em seu computador, bastando somente ter um bom navegador e uma conta no Google para utilizar, uma dessas ferramentas se chamada **Colaboratory** mais popularmente conhecida como [Colab](https://colab.research.google.com/) que permite escrever código Python em seu navegador e criar varios notebooks.
 
 ![colab](https://github.com/juceliosb/Imersao_Dados/blob/gh-pages/Imagem%20Colab.PNG)
 
 
 ### Dados
-A base de dados exploratória é uma pequena parte dos dados do INEP ENEN 2019 que será encontrada nesse link [Microdados Enen 2019](https://github.com/alura-cursos/imersao-dados-2-2020/blob/master/MICRODADOS_ENEM_2019_SAMPLE_43278.csv), por limitações de hardwere na plataforma *Colab*. Logo ao iniciar usaremos uma biblioteca chamada pandas.
+- A base de dados exploratória é uma pequena parte dos dados do INEP ENEN 2019 que será encontrada nesse link [Microdados Enen 2019](https://github.com/alura-cursos/imersao-dados-2-2020/blob/master/MICRODADOS_ENEM_2019_SAMPLE_43278.csv), por limitações de hardwere na plataforma *Colab*. Logo ao iniciar usaremos uma biblioteca chamada pandas.
 ```bash
 import pandas as pd
 fonte = "https://github.com/alura-cursos/imersao-dados-2-2020/blob/master/MICRODADOS_ENEM_2019_SAMPLE_43278.csv?raw=true"
@@ -15,3 +16,20 @@ dados.head()
 
 ```
 Criado uma variável `dados =` chamando a biblioteca `pd` irar ler todos os dados do tipo `csv` arquivos separados por vigulas desta fonte no link.
+
+```bash
+NU_INSCRICAO	NU_ANO	CO_MUNICIPIO_RESIDENCIA	NO_MUNICIPIO_RESIDENCIA	CO_UF_RESIDENCIA	SG_UF_RESIDENCIA	NU_IDADE	TP_SEXO	TP_ESTADO_CIVIL	TP_COR_RACA	TP_NACIONALIDADE	CO_MUNICIPIO_NASCIMENTO	NO_MUNICIPIO_NASCIMENTO	CO_UF_NASCIMENTO	SG_UF_NASCIMENTO	TP_ST_CONCLUSAO	TP_ANO_CONCLUIU	TP_ESCOLA	TP_ENSINO	IN_TREINEIRO	CO_ESCOLA	CO_MUNICIPIO_ESC	NO_MUNICIPIO_ESC	CO_UF_ESC	SG_UF_ESC	TP_DEPENDENCIA_ADM_ESC	TP_LOCALIZACAO_ESC	TP_SIT_FUNC_ESC	IN_BAIXA_VISAO	IN_CEGUEIRA	IN_SURDEZ	IN_DEFICIENCIA_AUDITIVA	IN_SURDO_CEGUEIRA	IN_DEFICIENCIA_FISICA	IN_DEFICIENCIA_MENTAL	IN_DEFICIT_ATENCAO	IN_DISLEXIA	IN_DISCALCULIA	IN_AUTISMO	IN_VISAO_MONOCULAR	...	TX_RESPOSTAS_CH	TX_RESPOSTAS_LC	TX_RESPOSTAS_MT	TP_LINGUA	TX_GABARITO_CN	TX_GABARITO_CH	TX_GABARITO_LC	TX_GABARITO_MT	TP_STATUS_REDACAO	NU_NOTA_COMP1	NU_NOTA_COMP2	NU_NOTA_COMP3	NU_NOTA_COMP4	NU_NOTA_COMP5	NU_NOTA_REDACAO	Q001	Q002	Q003	Q004	Q005	Q006	Q007	Q008	Q009	Q010	Q011	Q012	Q013	Q014	Q015	Q016	Q017	Q018	Q019	Q020	Q021	Q022	Q023	Q024	Q025
+0	190001004661	2019	1506138	Redenção	15	PA	17	M	1	3	1	1506138.0	Redenção	15.0	PA	3	0	1	NaN	1	NaN	NaN	NaN	NaN	NaN	NaN	NaN	NaN	0	0	0	0	0	0	0	0	0	0	0	0	...	ACAEAAACABEBABAADCEEEDE*CBDCCCADADCCCBEBBBBDB	99999CCCABBCAADDBCEBCCADBEEBDECBAABDEACACAEABB...	DEEDCAECDDEEECBCBECABEBAECBBCDAECAEBBBBBDCCDB	1	DEADBAAAEBEECEBCBCBCBDADAEABCEDDDDADCBEECACBC	ACACEEBCCBABADBBBACDBBACCCCADCEBADCBEEDBBEADB	EBBADCABDABACBCEBDEEAAADDBECDECDDBADBCDAAECBCC...	AADDDBEEEBEDDBEBACABCDBABECECACAECDCBDCCEDCDA	1.0	60.0	100.0	80.0	80.0	100.0	420.0	B	B	A	A	4	B	A	C	B	A	C	B	A	A	A	A	A	A	A	B	A	C	A	B	B
+1	190001004674	2019	1504208	Marabá	15	PA	23	M	1	3	1	1504208.0	Marabá	15.0	PA	1	3	1	1.0	0	NaN	NaN	NaN	NaN	NaN	NaN	NaN	NaN	0	0	0	0	0	0	0	0	0	0	0	0	...	ABBCEADCEBAAACACEDCDCDACCCACDCBCABCAACBDBDEDE	99999ABCEBCEDDECEEEBBCCEECCABDABEEBCDEAEBBEAEA...	NaN	1	NaN	CBABADBBCEEEBCBADCBEEDBBEADBBACDBBACCCCADACAC	BBEDABDACACBABAECBBCCADCEBDBBCDDEEAAADDBECDECA...	NaN	1.0	80.0	100.0	80.0	80.0	60.0	400.0	C	C	A	A	4	B	A	B	C	A	A	B	B	B	A	A	A	A	B	A	A	B	A	A	B
+2	190001004722	2019	1501402	Belém	15	PA	35	F	2	1	1	1501402.0	Belém	15.0	PA	1	12	1	1.0	0	NaN	NaN	NaN	NaN	NaN	NaN	NaN	NaN	0	0	0	0	0	0	0	0	0	0	0	0	...	CDCAACCAAADEACBBEBAAEECDABDEBAEAABEDCABABAABC	99999ECBCECEBBABECCCECECCEECCDECEEEDADDDDECEDD...	DDBEADEBBCADCEEACABECBCEBADECADCEDAACBDABABCE	1	AAECACDEADCBCDDDBCBDADAEABCEBABEEBCBEECEBDADC	CBABADBBCEEEBCBADCBEEDBBEADBBACDBBACCCCADACAC	BBEDABDACACBABAECBBCCADCEBDBBCDDEEAAADDBECDECA...	EEEADBEBACABCDBABECECACDCBDCCEDCDABEDECDDDBAA	1.0	100.0	120.0	120.0	100.0	120.0	560.0	C	A	B	B	5	C	A	B	C	A	A	B	A	B	A	A	A	A	B	A	B	B	A	A	B
+3	190001004735	2019	1507300	São Félix do Xingu	15	PA	23	F	1	3	1	1505437.0	Ourilândia do Norte	15.0	PA	1	7	1	NaN	0	NaN	NaN	NaN	NaN	NaN	NaN	NaN	NaN	0	0	0	0	0	0	0	0	0	0	0	0	...	EECCCEDBADBEAAAAEBAECEAAAAEEEBACCAC*CEAEDAECE	99999BABCDABBCBDDAAECADBDDADDCBCEEDCAEBCEAEABD...	CBDEBBCBDEBCABCDBDEDADCCBEDBCAECEBEBDEBAEECBC	1	BEEAAEBEEBADEADDADAEABCEDDDBCBCBCCACBCDADCCEB	EEBCEEDBADBBCBABCCADCEBACDBBACCACACBEADBBADCB	ADBBEDCABAABBCBCDAAECDDDBAAAECADECDCEBDEEAECBD...	BEDEEEAADBEBACABCDBABECECACADCBDCCEDCDABECDDD	1.0	100.0	120.0	120.0	120.0	40.0	500.0	E	C	A	A	1	B	A	B	C	A	A	B	A	A	A	A	A	A	B	A	A	B	A	A	B
+4	190001004776	2019	1500800	Ananindeua	15	PA	16	F	1	3	1	1500800.0	Ananindeua	15.0	PA	3	0	1	NaN	1	NaN	NaN	NaN	NaN	NaN	NaN	NaN	NaN	0	0	0	0	0	0	0	0	0	0	0	0	...	CCBCBEACABACABBBBACCBCEBDCBABCADADCBCADBAADEA	EBCAB99999BBCECBCACBEACBDAABDBCBBDACEBBACDCAEC...	AECCBBCBBCBDEDECACBAABEDABBEDDADCEADDBEBDBBEB	0	DEADBAAAEBEECEBCBCBCBDADAEABCEDDDDADCBEECACBC	ACACEEBCCBABADBBBACDBBACCCCADCEBADCBEEDBBEADB	EBBADCABDABACBCEBDEEAAADDBECDECDDBADBCDAAECBCC...	AADDDBEEEBEDDBEBACABCDBABECECACAECDCBDCCEDCDA	1.0	160.0	140.0	160.0	160.0	160.0	780.0	E	E	B	D	3	E	A	B	C	B	A	B	A	A	A	A	A	A	B	A	A	D	A	A	B
+5 rows × 136 columns
+```
+Continuando
+```bash
+dados.shape
+```
+```bash
+(127380, 136)
+```
