@@ -1,9 +1,11 @@
 # Imesão Dados
 ## 1 Primeira Análise em Dados de Educação
-O que precisamos para começar a trabalhar com Ciências de Dados. Poderiamos instalar todos os softwares necessário para rodar como Python, Jupter Notebook, e uma boa interfaçe gráfica para plotagem de gráficos. Porém existe uma segunda opção que facilita a vida de todos e principalmente quem não tem um computador tão poderoso, onde podemos utilizar ferramentas que não irar ficar instaladas em seu computador, bastando somente ter um bom navegador e uma conta no Google para utilizar uma dessas ferramentas chamada de **Colaboratory** ou mais popularmente conhecida como **Colab** que permite escrever código Python em seu navegador e criar varios notebooks, https://colab.research.google.com/
+O que precisamos para começar a trabalhar com Ciências de Dados. Poderiamos instalar todos os softwares necessário para rodar em seu computador e uma boa interfaçe gráfica para plotagem de gráficos. Porém existe uma segunda opção que facilita muito a vida de todos, principalmente quem não tem um computador tão poderoso, onde podemos utilizar ferramentas que não irar ficar instaladas em seu computador, bastando somente ter um bom navegador e uma conta no Google para utilizar, uma dessas ferramentas se chamada **Colaboratory** mais popularmente conhecida como **Colab** que permite escrever código Python em seu navegador e criar varios notebooks, https://colab.research.google.com/.
+### Dados
+A base de dados exploratória é uma pequena parte dos micro dados do INEP ENEN 2019 https://github.com/alura-cursos/imersao-dados-2-2020/blob/master/MICRODADOS_ENEM_2019_SAMPLE_43278.csv, devido a quantidade de dados ser muito grande e ter limitações de hardwere na plataforma *Colab*. Logo ao iniciar usaremos uma biblioteca chamada pandas.
 
 ## 2 Análise Exploratória
-A base de dados exploratória é uma pequena parte do ENEN 2019
+
 You can use the [editor on GitHub](https://github.com/juceliosb/Imersao_Dados/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
@@ -14,6 +16,11 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 
 ```markdown
 Syntax highlighted code block
+
+import pandas as pd
+fonte = "https://github.com/alura-cursos/imersao-dados-2-2020/blob/master/MICRODADOS_ENEM_2019_SAMPLE_43278.csv?raw=true"
+dados = pd.read_csv(fonte)
+dados.head()
 
 # Header 1
 ## Header 2
