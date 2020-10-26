@@ -1,5 +1,7 @@
 # Imesão Dados
-## 1 Primeira 
+## 1 Primeira Análise em Dados de Educação
+O que precisamos para começar a trabalhar com Ciências de Dados. Poderiamos instalar todos os softwares necessário para rodar como Python, Jupter Notebook, e uma boa interfaçe gráfica para plotagem de gráficos. Porém existe uma segunda opção que facilita a vida de todos e principalmente quem não tem um computador tão poderoso, onde podemos utilizar ferramentas que não irar ficar instaladas em seu computador, bastando somente ter um bom navegador e uma conta no Google para utilizar uma dessas ferramentas chamada de **Colaboratory** ou mais popularmente conhecida como **Colab** que permite escrever código Python em seu navegador e criar varios notebooks, https://colab.research.google.com/
+
 ## 2 Análise Exploratória
 A base de dados exploratória é uma pequena parte do ENEN 2019
 You can use the [editor on GitHub](https://github.com/juceliosb/Imersao_Dados/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
