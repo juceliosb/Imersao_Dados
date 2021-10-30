@@ -33,3 +33,5 @@ dados.shape
 ```bash
 (127380, 136)
 ```
+O restante das informações estão abaixo
+https://github.com/juceliosb/Imersao_Dados/blob/gh-pages/ImersaoDados_Desafios_Aula01.ipynb
